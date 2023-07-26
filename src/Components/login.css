@@ -1,0 +1,143 @@
+.signin-main {
+  font-family: "Inter", sans-serif;
+  padding: 25px;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.signin-main h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 550;
+  font-size: 32px;
+  text-align: center;
+}
+.signin-main h5 {
+  font-family: "Inter", sans-serif;
+  font-weight: 550;
+  font-size: 18px;
+  text-align: center;
+  margin: 15px 0;
+}
+.signin-main h5 span {
+  font-family: "Inter", sans-serif;
+  color: #1d4442;
+  text-decoration: underline;
+}
+.form-main {
+  padding: 0em 2em;
+}
+.form-main .input-group .form-control,
+.form-main .input-group .form-select,
+.form-main .input-group .input-group-text {
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: none;
+  margin: 0.5rem 0;
+  font-weight: 400;
+  font-size: 16px;
+  outline: none;
+  height: 50px;
+  font-family: "Inter", sans-serif;
+}
+.form-main .input-group .form-select:invalid,
+.form-main .input-group .form-select option[value=""] {
+  font-family: "Inter", sans-serif;
+  color: #757575;
+}
+.form-main .input-group .form-select option {
+  color: #000000;
+}
+.form-main .input-group .form-select option[value=""][disabled] {
+  display: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px white inset !important;
+  /* -webkit-box-shadow: 0 0 0 30px white inset !important; */
+}
+.form-control:focus,
+.form-control:active,
+.form-control:hover,
+.form-select:focus,
+.form-select:active,
+.form-select:hover {
+  border: 1px solid #ced4da !important;
+  box-shadow: none !important;
+}
+
+#basic-addon1,
+#basic-addon3 {
+  border-right: none !important;
+}
+.basic-addon2,
+#basic-addon3,
+.basic-addon2:hover,
+.basic-addon2:active,
+.basic-addon2:focus {
+  border-left: none !important;
+}
+.form-main small {
+  font-family: "Inter", sans-serif;
+  color: red;
+  float: right;
+  font-weight: 400;
+}
+.form-check-input,
+.form-check-input:checked {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.form-check-input:checked {
+  background-color: #1d4442 !important;
+  border-color: #1d4442 !important;
+}
+.login-btn {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  background: #1d4442 !important;
+  border-radius: 30px;
+  height: 50px;
+  color: #fff;
+  border: none !important;
+}
+.login-btn:hover,
+.login-btn:active {
+  filter: brightness(0.93);
+}
+
+.login-text {
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+.login-text:hover {
+  color: #1d4442;
+  transition: 0.3s;
+}
+.disabled {
+  background-color: #78faa182 !important;
+  border: 0 !important;
+}
+@media screen and (max-width: 768px) {
+  .form-main {
+    padding: 0 !important;
+  }
+  .signin-main h4 {
+    font-size: 28px;
+  }
+  .signin-main h3 {
+    font-size: 24px;
+  }
+  .signin-main h5 {
+    font-size: 16px;
+  }
+  .signin-main p {
+    font-size: 14px;
+    padding: 0 !important;
+  }
+}
