@@ -19,11 +19,11 @@ const Home = () => {
    const limit = useSelector(state => state.products.limit);
    const error = useSelector(state => state.products.error);
    const navigate = useNavigate();
-   // useEffect(() => {
-   //    if (!user.user.token) {
-   //       navigate('/login');
-   //    }
-   // }, [])
+   useEffect(() => {
+      if (!user.user.token) {
+         navigate('/login');
+      }
+   }, [])
    console.log(skip)
 
    useEffect(() => {
