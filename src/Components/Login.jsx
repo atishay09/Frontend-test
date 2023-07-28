@@ -61,7 +61,7 @@ const Login = () => {
                            />
                         </InputGroup.Text>
                         <Form.Control
-                           placeholder="Email"
+                           placeholder="Username"
                            type="text"
                            aria-label="Username"
                            disabled={

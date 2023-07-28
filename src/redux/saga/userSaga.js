@@ -1,5 +1,8 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
 
+
+// api call to authenticate user
+
 const apiUrl = `https://dummyjson.com/auth/login`;
 function postAPI(data) {
    return fetch(apiUrl, {
@@ -8,10 +11,8 @@ function postAPI(data) {
          'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-    
          username: data?.email,
          password: data?.password,
-         // expiresInMins: 60, // optional
        })
    },
    ).then(response => response.json())

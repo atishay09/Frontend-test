@@ -6,6 +6,8 @@ import rootSaga from './saga/index.js';
 const sagaMiddleware = createSagaMiddleware()
 const store = configureStore({
    reducer: rootReducer,
+
+  //  Integrated Saga MiddleWare
    middleware: (getDefaultMiddleWare) => {
      return getDefaultMiddleWare({ thunk: false }).prepend(sagaMiddleware);
    }
