@@ -1,0 +1,42 @@
+.card {
+   position: relative;
+   max-width: 26.5em;
+   margin: 2rem auto;
+   padding: 2em;
+   background: #fff;
+ }
+ 
+ .card__title {
+   margin: 0 auto 1em;
+   color: #333;
+   text-align: center;
+   text-transform: capitalize;
+ }
+ 
+ .card__img {
+   display: block;
+   width: 20em;
+   max-width: 100%;
+   margin: 1em auto;
+   border-radius: 2px;
+ }
+ 
+ .card__text {
+   margin: 2em 5%;
+   color: #646464;
+ }
+ 
+ .card__btn {
+   display: table;
+   padding: .7em 4em;
+   background: #1d4442;
+   color: #fff;
+   text-decoration: none;
+   text-transform: uppercase;
+   margin: 1em auto 0;
+ }
+ 
+ 
+ 
+
+ 
