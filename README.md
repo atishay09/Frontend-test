@@ -22,3 +22,8 @@ Steps to run the project
    npm start
 
    - the project will start at http://localhost:3000
+
+   Credentials for login  
+
+  "username" :"kminchelle",
+  "password": "0lelplR"
