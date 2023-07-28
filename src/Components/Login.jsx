@@ -3,17 +3,39 @@ import './login.css'
 import signInImage from "../Images/signin.png"
 import { FiUser, FiLock, FiEye, FiEyeOff } from "react-icons/fi";
 import { InputGroup, Form, Spinner } from "react-bootstrap";
+import { useDispatch, useSelector } from 'react-redux';
+import { clearAuth, postUser } from '../redux/actions/users';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Login = () => {
 
    const [show, setShow] = useState(false);
-   const [check, setCheck] = useState(false);
+   const {user} = useSelector((data)=>data)
+   console.log(user)
    const [input, setInput] = useState({ email: "", password: "" });
    const [loading, setLoading] = useState(false);
    const handleChange = (e) => {
       const { name } = e.target;
       setInput({ ...input, [name]: e.target.value });
-  };
+   };
+   const dispatch = useDispatch()
+   const navigate = useNavigate()
+   const submitForm = (e) => {
+      e.preventDefault();
+      dispatch(postUser(input))
+   }
+
+   useEffect(()=>{
+      if(user?.user?.message){
+         alert(user?.user?.message)
+         dispatch(clearAuth())
+      }
+      else if(user?.user?.token){
+         navigate("/")
+      }
+   },[user])
+
    return (
       <div>
          <div className="signin-main">
@@ -29,7 +51,7 @@ const Login = () => {
                   <h3>Login</h3>
                   <Form
                      className="form-main"
-                  // onSubmit={submitForm}
+                     onSubmit={submitForm}
                   >
                      <InputGroup>
                         <InputGroup.Text id="basic-addon1">
@@ -117,11 +139,11 @@ const Login = () => {
                         <button
                            type="submit"
                            disabled={
-                              loading ? true : false
+                              user?.loading ? true : false
                            }
                            className="login-btn btn-ripple"
                         >
-                           {loading ? (
+                           {user?.loading ? (
                               <>
                                  <Spinner
                                     as="span"
